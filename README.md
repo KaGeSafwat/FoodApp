@@ -1,12 +1,52 @@
-# React + Vite
+# 🍕 FoodCart
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+_A lightweight food ordering interface with cart functionality_
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- **Menu browsing** - View available food items
+- **Interactive cart** - Add/remove items with real-time updates
+- **Toast notifications** - Visual feedback when modifying cart
+- **Checkout form** - Simple order submission
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠 Tech Stack
+
+| Category         | Technology       |
+|------------------|------------------|
+| Frontend         | React 19         |
+| State Management | Context API      |
+| API Client       | Fetch API        |
+| Mock Backend     | JSON Server      |
+| Notifications    | Toasify          |
+| Styling          |  CSS Modules     |
+
+## 🚀 Quick Start
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/KaGeSafwat/FoodApp.git
+   cd FoodApp
+2.Start the mock API server
+  npm json-server --watch db.json --port 3001
+  
+3.
+  npm install
+  npm run dev
+  
+🧩 Project Structure
+
+src/
+  ├── components/
+  │   ├── Items/           # Food item listing
+  │   ├── CartModal/           # Cart management
+  │   └── Checkout/       # Order form
+  ├── context/
+  |   |__showCartModal.js # state management
+  │   └── CartContext.js  # State management
+  ├── App.js              # Main component
+ db.json             # Mock database
+
+
+ 📜 License
+MIT © [Abd Elrahman Safwat]
