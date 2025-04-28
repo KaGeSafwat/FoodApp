@@ -1,11 +1,13 @@
 import classes from './CartModalItem.module.css';
-import { currencyFormatter } from '../utility/formatter';
+import { currencyFormatter } from '../../utility/formatter';
 export default function CartModalItem({
   item,
   addItemHandler,
   removeItemHandler,
   ordered,
+  deleteItemHandler,
 }) {
+  // item in cart modal
   let content = (
     <li className={classes.item}>
       <div className={classes.itemInfo}>
@@ -19,10 +21,14 @@ export default function CartModalItem({
         <button onClick={() => removeItemHandler(item.id)}>
           <i className="fa-solid fa-minus"></i>
         </button>
+        <button onClick={() => deleteItemHandler(item.id)}>
+          <i className="fa-solid fa-trash"></i>
+        </button>
       </div>
     </li>
   );
 
+  // item in order modal
   if (ordered) {
     content = (
       <li className={classes.item}>

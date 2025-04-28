@@ -1,3 +1,4 @@
+// reducer function for cartContext
 const cartReducer = (state, action) => {
   if (action.type === 'ADD_ITEM') {
     const existingCartItemIndex = state.items.findIndex(
@@ -42,6 +43,11 @@ const cartReducer = (state, action) => {
   if (action.type === 'CLEAR_CART') {
     localStorage.removeItem('cart');
     return { ...state, items: [] };
+  }
+  if (action.type === 'DELETE_ITEM') {
+    const updatedItems = state.items.filter((item) => item.id !== action.id);
+    localStorage.setItem('cart', JSON.stringify(updatedItems));
+    return { ...state, items: updatedItems };
   }
   return state;
 };

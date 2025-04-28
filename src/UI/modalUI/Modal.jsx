@@ -13,8 +13,20 @@ export default function Modal({ children, isOpen, onClose }) {
       modal.close();
     };
   }, [isOpen]);
+
+  const handleBackdropClick = (e) => {
+    if (e.target === modalRef.current) {
+      onClose();
+    }
+  };
+
   return createPortal(
-    <dialog ref={modalRef} onClose={onClose} className={classes.modal}>
+    <dialog
+      ref={modalRef}
+      onClose={onClose}
+      onClick={handleBackdropClick}
+      className={classes.modal}
+    >
       {children}
     </dialog>,
     document.getElementById('modal')
