@@ -38,32 +38,29 @@ _A lightweight food ordering interface with cart functionality_
   
 🧩 Project Structure
 
-ROOT
-├── 📄 db.json
-└── src/
-    ├── 🏗️ Core
-    │   ├── App.js (Provider)
-    │   └── index.js
-    │
-    ├── 🧺 Context
-    │   └── CartContext.js
-    │
-    ├── 🎣 Hooks
-    │   └── useFetch.js → db.json
-    │
-    ├── 🧩 Components
-    │   ├── Header → CartModal
-    │   ├── Items → (multiple Item)
-    │   └── Modal Chain: CartModal → Checkout → Order → Empty
-    │
-    ├── 🖼️ UI Library
-    │   ├── Button.jsx ← Item
-    │   ├── Card.jsx ← Item
-    │   └── Modal.jsx ← CartModal
-    │
-    └── 🛠️ Utilities
-        ├── formatters.js → Item
-        └── validators.js → CheckoutModal
+ROOT (FoodApp)
+├── 📁 src/
+│   ├── 🏗 App.js (CartProvider)
+│   ├── 🔗 index.js
+│   ├── 🧺 context/
+│   │   └── CartContext.js (state+logic)
+│   ├── 🎣 hooks/
+│   │   └── useFetch.js (→ db.json)
+│   ├── 🧩 components/
+│   │   ├── Header/ (→ CartModal)
+│   │   ├── Items/ (→ Item)
+│   │   ├── Item/ (uses ui/Card+Button)
+│   │   ├── CartModal/ (→ CartModalItems)
+│   │   ├── CheckoutModal/ (uses utility/validators)
+│   │   └── OrderModal/ → EmptyModal
+│   ├── 🖼 ui/
+│   │   ├── Button.jsx (reused)
+│   │   ├── Card.jsx (→ Item)
+│   │   └── Modal.jsx (base for all modals)
+│   └── 🛠 utility/
+│       ├── formatters.js (price/date)
+│       └── validators.js (form checks)
+└── 🗃 db.json (mock data)
 
 
  📜 License
