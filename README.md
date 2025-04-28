@@ -28,11 +28,12 @@ _A lightweight food ordering interface with cart functionality_
    git clone https://github.com/KaGeSafwat/FoodApp.git
    cd FoodApp
 2.Start the mock API server
-  npm json-server --watch db.json --port 3001
+
+   npm json-server --watch db.json --port 3001
   
-3.
-  npm install
-  npm run dev
+3.Run the React app
+   npm install
+   npm run dev
   
 🧩 Project Structure
 
