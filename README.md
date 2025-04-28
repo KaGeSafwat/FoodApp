@@ -32,6 +32,7 @@ _A lightweight food ordering interface with cart functionality_
    npm json-server --watch db.json --port 3001
   
 3.Run the React app
+
    npm install
    npm run dev
   
