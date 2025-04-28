@@ -39,15 +39,27 @@ _A lightweight food ordering interface with cart functionality_
 🧩 Project Structure
 
 src/
-  ├── components/
-  │   ├── Items/           # Food item listing
-  │   ├── CartModal/           # Cart management
-  │   └── Checkout/       # Order form
-  ├── context/
-  |   |__showCartModal.js # state management
-  │   └── CartContext.js  # State management
-  ├── App.js              # Main component
- db.json             # Mock database
+├── components/
+│ ├── CartModal/ # Main cart overlay
+│ ├── CartModalItems/ # Individual cart items
+│ ├── CheckoutModal/ # Order form
+│ ├── EmptyModal/ # Empty state UI
+│ ├── Header/ # Navigation bar
+│ ├── Item/ # Single menu item
+│ └── Items/ # Menu listing
+├── context/ # Cart state
+├── hooks/
+│ └── useFetch.js # Custom fetch hook
+├── ui/
+│ ├── Button.jsx # Reusable buttons
+│ ├── Card.jsx # Food item cards
+│ └── Modal.jsx # Base modal component
+├── utility/
+│ ├── formatters.js # Price formatting
+│ └── validators.js # Form validation
+├── App.js
+└── index.js
+db.json # Mock database (root)
 
 
  📜 License
